@@ -1,0 +1,71 @@
+@import "modules/_breakpoints",
+        "modules/_colors",
+        "modules/_fonts",
+        "modules/_buttons";
+
+body{
+	font-family: $general-font;
+  font-size: $general-font-size;
+  color: $text-colors;
+}
+
+h1{
+  color: $headers-colors;
+  font-size: 3em;
+}
+
+a{
+  color:$links-colors;
+}
+
+#aside{
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  
+  a{
+    font-size: $aside-font-size;
+    line-height: 1.5em;
+  }
+}
+
+#article{
+  display: inline-block;
+  width: 80%;
+
+  label{
+    min-width: 240px;
+    display: inline-block;
+  }
+
+  button{
+    color:$btn-text-colors;
+    text-decoration:none;
+    padding:10px 10px;
+    border-radius:10px;
+    border: 0px solid;
+    font-family: $general-font;
+    font-size:1.8em;
+    @include button-bg(#e74c3c);
+    float: left;
+    width: 20%;
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+
+  > div{
+    > div{
+      margin-bottom: 10px;
+
+      input{
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+
+button.btn-red {
+   @include button-bg(#e74c3c);
+}
